@@ -1,0 +1,19 @@
+body {
+      font-family: Arial, sans-serif;
+    }
+h4 {
+     text-align: center;
+      margin-bottom: 20px;
+    }
+
+.main{
+  display: flex;
+  
+  height: 100%;
+
+}
+
+.dashboard{
+      display: flex;
+      height: 100%;
+    }

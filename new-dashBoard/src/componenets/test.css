@@ -1,0 +1,43 @@
+/* Ensure Sidebar and Main Content are side by side */
+.app-container {
+      display: flex;
+      height: 100vh;
+    }
+    
+    /* Sidebar styling */
+ 
+    /* Main Content takes full available width */
+    .main-content {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      overflow: hidden; /* Prevents extra scrolling issues */
+    }
+    
+    /* Fixed Header */
+    .header {
+      top: 0;
+      background: white;
+      padding: 15px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      
+    }
+    
+    /* Content below header */
+    .analytics-container {
+      flex: 1;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      overflow:scroll;
+    }
+    
+    /* Individual Data Cards */
+    .data-card {
+      border: 1px solid black;
+      padding:10px;
+      margin: 10px;
+      width: 45%;
+      height: 400px;
+    }
+    
