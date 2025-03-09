@@ -5,6 +5,9 @@ import { IoMenu } from "react-icons/io5";
 import { MdSpaceDashboard } from "react-icons/md";
 import { FaMap } from "react-icons/fa";
 import { RxCross2 } from "react-icons/rx";
+import { FiLogOut } from "react-icons/fi";
+import { Link } from "react-router-dom";
+
 import './sidebar.css'
 
 
@@ -17,22 +20,33 @@ const [show, setShow] = React.useState(false);
             
             <div className='sidebar-items'>
                  <div className='sidebar-menu' >
-                      {show? <RxCross2 onClick={()=>{setShow(!show)}}/> :<IoMenu onClick={()=>{setShow(!show)}}/>}
+                      {show? <><RxCross2 onClick={()=>{setShow(!show)}}/> <h6>Welcome</h6></> :<IoMenu onClick={()=>{setShow(!show)}}/>}
                   </div>
 
-                  <div className='sidebar-icons'>
+                  <Link to="/"><div className='sidebar-icons'>
                   <MdSpaceDashboard />
                  {show?<span className='sidebar-icon-text'>Dashboard</span>:""}
                   </div>
-                  <div className='sidebar-icons'>
+                  </Link>
+                  <Link to="/Home"> <div className='sidebar-icons'>
                         <MdHomeMax/>
                         {show?<span className='sidebar-icon-text'>Home</span>:""} 
                   </div>
-                  <div className='sidebar-icons'>
+
+                  </Link>
+                  <Link to="/map">
+                  <div className='sidebar-icons' title='view on map'>
                        <FaMap />
                         {show?<span className='sidebar-icon-text'>Map</span>:""}
                   </div>
+                  </Link>
+          
+                  <div className='logout-btn'>
+                  <FiLogOut />
+                  {show?<span className='sidebar-icon-text'>Logout</span>:""}
+                  </div>
             </div>
+           
         </div>
         
        

@@ -7,8 +7,6 @@ const Test = () => {
   return (
     <>  
     <div className="app-container">
-      
-    <Sidebar/>
     
     
     <div className="main-content">

@@ -1,20 +1,18 @@
-/* Ensure Sidebar and Main Content are side by side */
+
 .app-container {
       display: flex;
       height: 100vh;
     }
     
-    /* Sidebar styling */
- 
-    /* Main Content takes full available width */
+
     .main-content {
       flex: 1;
       display: flex;
       flex-direction: column;
-      overflow: hidden; /* Prevents extra scrolling issues */
+      overflow: hidden; 
     }
     
-    /* Fixed Header */
+  
     .header {
       top: 0;
       background: white;
@@ -23,7 +21,7 @@
       
     }
     
-    /* Content below header */
+    
     .analytics-container {
       flex: 1;
       display: flex;
@@ -32,7 +30,7 @@
       overflow:scroll;
     }
     
-    /* Individual Data Cards */
+   
     .data-card {
       border: 1px solid black;
       padding:10px;
